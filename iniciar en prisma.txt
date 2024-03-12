@@ -1,0 +1,15 @@
+#Comandos para iniciar en prisma
+
+primero hacemos npm init -y
+para hacer el json
+
+para instalar prisma en nuestro proyeecto (en development)
+
+npm i prisma -D
+
+con npx prisma iniciamos prisma (con init se configura todo y con --datasource elegimos la BD)
+
+en mi caso:
+npx prisma init --datasource-provider sqlite
+
+se deberia crear entonces un archivo schema
