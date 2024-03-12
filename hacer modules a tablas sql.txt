@@ -1,0 +1,20 @@
+mi module es:
+
+// para auto incrementar @default(autoincrement())
+// el @ es un identificador unico de la tabla
+// Los @ son para funciones por ejemplo
+
+model Users {
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String
+  age Int
+}
+
+nota: al hacer esto como recordamos del .env la base se ira a ./dev.db como defecto
+
+hacemos: npx prisma migrate dev
+
+como nombre le ponemos init
+
+y listo, con sqlite viewer podremos ver nuestras tablas
