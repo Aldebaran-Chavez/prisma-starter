@@ -1,0 +1,19 @@
+import {PrismaClient} from "@prisma/client"; 
+
+const prisma = new PrismaClient()
+
+async function main(){
+
+    //para consultar
+    // esto nos da un arreglo para ver los usuarios
+    const allUsers = await prisma.users.findMany()
+    console.log(allUsers);
+
+    // consultemos solo el nombre e id
+    allUsers.map(users => {
+        console.log(`${users.name} - ur id is ${users.id}`);
+    })
+
+}
+
+main()
