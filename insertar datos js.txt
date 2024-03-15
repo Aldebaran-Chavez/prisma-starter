@@ -1,0 +1,23 @@
+// para importar prisma hacemos:
+// type module en el json
+import {PrismaClient} from "@prisma/client"; 
+
+// creamos una instancia yo le llamare prisma
+const prisma = new PrismaClient()
+
+async function main(){
+    // users es mi tabla
+    // .create espera un objeto
+    const newUser = await prisma.users.create({
+        // data es una propiedad del objeto
+        data:{
+            // especificamos que insertar
+            name: "Gyro",
+            age: 24,
+            email: "gyro@example.com"
+        }
+    })
+    console.log(newUser);
+}
+
+main()
