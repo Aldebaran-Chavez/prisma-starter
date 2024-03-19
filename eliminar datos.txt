@@ -1,0 +1,12 @@
+try {
+        const allUsers = await prisma.users.delete({
+            where:{
+                id:5 
+            }
+        })
+        
+        console.log(allUsers);
+    } catch (error) {
+        console.log(error.message);
+        //aqui jugamos con los errores
+    }
